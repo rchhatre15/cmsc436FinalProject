@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    tools:context=".AccountsActivity">
+
+    <TextView
+        android:id="@+id/checkingBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Checking: $0.00"/>
+
+    <TextView
+        android:id="@+id/savingsBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Savings: $0.00"/>
+
+    <EditText
+        android:id="@+id/amountEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Amount"
+        android:inputType="numberDecimal"/>
+
+    <Button
+        android:id="@+id/depositButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deposit to Checking"/>
+
+    <Button
+        android:id="@+id/withdrawButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Withdraw from Checking"/>
+
+    <EditText
+        android:id="@+id/transferAmountEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Transfer Amount"
+        android:inputType="numberDecimal"/>
+
+    <Button
+        android:id="@+id/transferToSavingsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Transfer to Savings"/>
+
+    <Button
+        android:id="@+id/transferToCheckingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Transfer to Checking"/>
+
+    <Button
+        android:id="@+id/signOutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Out"/>
+
+</LinearLayout>
