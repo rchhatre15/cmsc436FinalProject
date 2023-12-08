@@ -12,13 +12,14 @@ data class Account(
 
     companion object {
         fun fromJson(json: String): Account {
-            val parts = json.split(",")
+            val parts = json.split(",").map { it.trim() }
             return Account(
-                username = parts[0],
-                password = parts[1],
-                checkingBalance = parts[2].toDoubleOrNull() ?: 0.0,
-                savingsBalance = parts[3].toDoubleOrNull() ?: 0.0
+                username = parts.getOrNull(0) ?: "",
+                password = parts.getOrNull(1) ?: "",
+                checkingBalance = parts.getOrNull(2)?.toDoubleOrNull() ?: 0.0,
+                savingsBalance = parts.getOrNull(3)?.toDoubleOrNull() ?: 0.0
             )
         }
     }
+
 }

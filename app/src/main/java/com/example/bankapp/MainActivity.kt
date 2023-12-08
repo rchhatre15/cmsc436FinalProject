@@ -43,12 +43,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun loadAccounts() {
         val sharedPref = getSharedPreferences("BankAppPrefs", Context.MODE_PRIVATE)
-        val accountsJson = sharedPref.getString("accounts", "[]") ?: "[]"
-        accounts = accountsJson.removeSurrounding("[", "]").split(",").filter { it.isNotBlank() }
-            .map { it.trim() }
-            .filter { it.split(",").size == 4 }  // Ensure each entry has 4 parts
+        val accountsJson = sharedPref.getString("accounts", "") ?: ""
+        accounts = accountsJson.split(";").filter { it.isNotBlank() }
             .map { Account.fromJson(it) }
             .toMutableList()
     }
+
 
 }
