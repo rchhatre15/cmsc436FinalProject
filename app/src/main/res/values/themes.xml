@@ -3,7 +3,11 @@
     <style name="Base.Theme.Bankapp" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+<!--        <item name="android:windowEnterTransition">@transition/fade_and_slide</item>-->
+<!--        <item name="android:windowExitTransition">@transition/account_anim</item>-->
     </style>
+
 
     <style name="Theme.Bankapp" parent="Base.Theme.Bankapp" />
 </resources>

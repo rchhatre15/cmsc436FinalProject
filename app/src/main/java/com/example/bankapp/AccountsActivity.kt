@@ -1,6 +1,7 @@
 package com.example.bankapp
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -26,8 +27,14 @@ class AccountsActivity : AppCompatActivity() {
         val transferToSavingsButton = findViewById<Button>(R.id.transferToSavingsButton)
         val transferToCheckingButton = findViewById<Button>(R.id.transferToCheckingButton)
         val signOutButton = findViewById<Button>(R.id.signOutButton)
+        val atmButton = findViewById<Button>(R.id.mapButton)
 
         updateBalances(account, checkingBalanceText, savingsBalanceText)
+
+        atmButton.setOnClickListener {
+            val mapIntent = Intent(this, MapsActivity::class.java)
+            startActivity(mapIntent)
+        }
 
         depositButton.setOnClickListener {
             val amount = amountEditText.text.toString().toDoubleOrNull() ?: 0.0
