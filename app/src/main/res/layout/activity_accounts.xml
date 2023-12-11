@@ -6,78 +6,98 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:gravity="center"
-    tools:context=".AccountsActivity">
-
-    <Button
-        android:id="@+id/mapButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Find ATM"
-        android:background="#2196F3"
-        android:layout_marginBottom="60dp"
-        android:tooltipText="Locate ATMs on the UMD Campus"/>
+    android:padding="16dp">
 
     <TextView
-        android:id="@+id/checkingBalance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Checking: $0.00"
-        />
-
-    <TextView
-        android:id="@+id/savingsBalance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Savings: $0.00"/>
-
-    <EditText
-        android:id="@+id/amountEditText"
+        android:id="@+id/welcome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Amount"
-        android:inputType="numberDecimal"/>
+        android:text="Bank of College Park"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textSize="30dp"/>
 
-    <Button
-        android:id="@+id/depositButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Deposit to Checking"
-        android:tooltipText="Deposit money into checking account"/>
-
-    <Button
-        android:id="@+id/withdrawButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Withdraw from Checking"
-        android:tooltipText="Withdraw money from checking account"/>
-
-    <EditText
-        android:id="@+id/transferAmountEditText"
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter Transfer Amount"
-        android:inputType="numberDecimal"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center"
+        tools:context=".AccountsActivity">
 
-    <Button
-        android:id="@+id/transferToSavingsButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Transfer to Savings"
-        android:tooltipText="Transfer money from checking account to savings account"/>
+        <Button
+            android:id="@+id/mapButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Find ATM"
+            android:background="#2196F3"
+            android:layout_marginBottom="60dp"
+            android:tooltipText="Locate ATMs on the UMD Campus"/>
 
-    <Button
-        android:id="@+id/transferToCheckingButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Transfer to Checking"
-        android:tooltipText="Transfer money from savings account to checking account"/>
+        <TextView
+            android:id="@+id/checkingBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Checking: $0.00"
+            />
 
-    <Button
-        android:id="@+id/signOutButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sign Out"/>
+        <TextView
+            android:id="@+id/savingsBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Savings: $0.00"/>
 
+        <EditText
+            android:id="@+id/amountEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Amount"
+            android:inputType="numberDecimal"/>
+
+        <Button
+            android:id="@+id/depositButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deposit to Checking"
+            android:tooltipText="Deposit money into checking account"/>
+
+        <Button
+            android:id="@+id/withdrawButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Withdraw from Checking"
+            android:tooltipText="Withdraw money from checking account"/>
+
+        <EditText
+            android:id="@+id/transferAmountEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Transfer Amount"
+            android:inputType="numberDecimal"/>
+
+        <Button
+            android:id="@+id/transferToSavingsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transfer to Savings"
+            android:tooltipText="Transfer money from checking account to savings account"/>
+
+        <Button
+            android:id="@+id/transferToCheckingButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transfer to Checking"
+            android:tooltipText="Transfer money from savings account to checking account"/>
+
+        <Button
+            android:id="@+id/signOutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Out"/>
+
+    </LinearLayout>
 </LinearLayout>
